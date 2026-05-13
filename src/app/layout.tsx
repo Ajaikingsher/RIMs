@@ -1,15 +1,17 @@
 import type { Metadata } from "next";
-import { Inter, Poppins } from "next/font/google";
+import { Plus_Jakarta_Sans, Outfit } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
+import ConditionalWrapper from "@/components/layout/ConditionalWrapper";
 import { organizationSchema, softwareSchema } from "@/lib/seo";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-const poppins = Poppins({
-  weight: ["300", "400", "500", "600", "700"],
+import { Toaster } from "sonner";
+
+
+const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ["latin"], variable: "--font-jakarta" });
+const outfit = Outfit({
+  weight: ["300", "400", "500", "600", "700", "800"],
   subsets: ["latin"],
-  variable: "--font-poppins",
+  variable: "--font-outfit",
 });
 
 export const metadata: Metadata = {
@@ -60,12 +62,15 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${inter.variable} ${poppins.variable} font-sans antialiased min-h-screen flex flex-col bg-[#F8FAFC]`}
+        className={`${plusJakartaSans.variable} ${outfit.variable} font-sans antialiased min-h-screen flex flex-col bg-[#F8FAFC]`}
       >
-        <Navbar />
-        <main className="flex-grow">{children}</main>
-        <Footer />
+        <ConditionalWrapper>
+          {children}
+        </ConditionalWrapper>
+        <Toaster position="top-center" richColors />
       </body>
+
+
     </html>
   );
 }

@@ -87,8 +87,8 @@ const config = {
         "fade-up": "fade-up 0.5s ease-out",
       },
       fontFamily: {
-        sans: ['var(--font-inter)'],
-        heading: ['var(--font-poppins)'],
+        sans: ['var(--font-jakarta)', 'sans-serif'],
+        heading: ['var(--font-outfit)', 'sans-serif'],
       }
     },
   },

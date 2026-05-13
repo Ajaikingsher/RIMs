@@ -1,4 +1,6 @@
 import { NextRequest, NextResponse } from "next/server"
+import prisma from "@/lib/prisma"
+
 
 // Basic XSS sanitizer
 function sanitize(val: string): string {
@@ -39,17 +41,17 @@ export async function POST(req: NextRequest) {
       subject: sanitize(subject || ""),
       message: sanitize(message),
       inquiryType: sanitize(inquiryType),
-      submittedAt: new Date().toISOString(),
     }
 
-    // TODO: Replace this with actual email sending (Nodemailer / SendGrid)
-    // or database storage (PostgreSQL via Prisma)
-    console.log("Contact form submission:", sanitizedData)
+    // Save to database
+    const contactMessage = await prisma.contactMessage.create({
+      data: sanitizedData
+    })
 
-    // Example: Send to email
-    // await sendEmail({ to: "contact@rimssoftware.com", subject: `New Inquiry: ${sanitizedData.inquiryType}`, body: JSON.stringify(sanitizedData) })
+    console.log("Contact form saved to DB:", contactMessage.id)
 
     return NextResponse.json({ success: true, message: "Message received. We'll contact you shortly." }, { status: 200 })
+
   } catch (error) {
     console.error("Contact API error:", error)
     return NextResponse.json({ error: "Internal server error" }, { status: 500 })

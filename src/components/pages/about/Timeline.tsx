@@ -5,43 +5,33 @@ import { motion } from "framer-motion"
 const milestones = [
   {
     year: "1996",
-    title: "Founded",
-    description: "RIMs Software Company established in Coimbatore by Shri. C. Thangaraj with a vision to digitize dairy cooperative management.",
+    title: "RIMS Founded",
+    description: "Company established in Coimbatore with a mission to digitize cooperative management systems.",
   },
   {
-    year: "2000",
-    title: "First 100 Deployments",
-    description: "Gramya Paledu reached 100+ cooperative societies across Coimbatore and Erode districts, becoming the preferred ERP.",
-  },
-  {
-    year: "2005",
-    title: "Tamil Language Integration",
-    description: "Full Tamil language support added — bilingual UI, Tamil statutory registers, and Tamil print-ready reports.",
-  },
-  {
-    year: "2010",
-    title: "Banking Integration",
-    description: "Integrated with nationalized banks for direct member salary credits and cooperative banking transactions.",
+    year: "1998",
+    title: "Launch of 'Gramya Paledu'",
+    description: "Our flagship ERP for dairy cooperatives officially launched, revolutionizing local society management.",
   },
   {
     year: "2015",
-    title: "Multi-State Expansion",
-    description: "Extended operations to Kerala, Karnataka, and Andhra Pradesh. Over 2000 societies running on Gramya Paledu.",
+    title: "4000+ Deployments",
+    description: "Milestone achieved: Over 4000 active cooperative society deployments across South India.",
   },
   {
     year: "2018",
-    title: "Audit Automation Launch",
-    description: "Launched automated audit pack generation — one-click compliance reports for cooperative auditors.",
+    title: "Government Recognition",
+    description: "Official recognition from state cooperative departments for audit automation and transparency.",
   },
   {
-    year: "2022",
-    title: "4000+ Deployments",
-    description: "Milestone achieved: 4000+ active cooperative deployments across four states. ISO-ready processes introduced.",
+    year: "2020",
+    title: "Academic Partnerships",
+    description: "Strategic collaboration with institutions for research and industry-aligned software development.",
   },
   {
     year: "2024",
-    title: "Next-Gen Platform",
-    description: "Launched modernized platform with cloud backup, remote support infrastructure, and enhanced analytics dashboards.",
+    title: "Talent Development",
+    description: "Focused initiatives for skill development and local talent recruitment in the cooperative IT sector.",
   },
 ]
 

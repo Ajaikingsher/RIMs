@@ -3,13 +3,28 @@
 import { motion } from "framer-motion"
 import { Download, FileText, Video, Book, Shield } from "lucide-react"
 
-const downloads = [
+interface DownloadItem {
+  id?: string
+  title: string
+  description?: string | null
+  fileUrl: string
+  category?: string | null
+  size?: string
+  type?: string
+  icon?: any
+  color?: string
+  bg?: string
+  border?: string
+}
+
+const staticDownloads: DownloadItem[] = [
   {
     icon: FileText,
     title: "Gramya Paledu User Manual",
-    desc: "Complete operator guide — milk entry, payment, reports, Tamil & English.",
+    description: "Complete operator guide — milk entry, payment, reports, Tamil & English.",
     size: "4.2 MB",
     type: "PDF",
+    fileUrl: "#",
     color: "text-red-500",
     bg: "bg-red-500/10",
     border: "border-red-500/20",
@@ -17,9 +32,10 @@ const downloads = [
   {
     icon: Book,
     title: "Quick Start Guide",
-    desc: "Get your cooperative live in one day — step-by-step setup guide.",
+    description: "Get your cooperative live in one day — step-by-step setup guide.",
     size: "1.1 MB",
     type: "PDF",
+    fileUrl: "#",
     color: "text-blue-500",
     bg: "bg-blue-500/10",
     border: "border-blue-500/20",
@@ -27,9 +43,10 @@ const downloads = [
   {
     icon: FileText,
     title: "Audit Report Formats",
-    desc: "All statutory register formats and audit-ready report templates.",
+    description: "All statutory register formats and audit-ready report templates.",
     size: "2.8 MB",
     type: "PDF",
+    fileUrl: "#",
     color: "text-amber-500",
     bg: "bg-amber-500/10",
     border: "border-amber-500/20",
@@ -37,9 +54,10 @@ const downloads = [
   {
     icon: Video,
     title: "Training Video Guide",
-    desc: "Video walkthroughs for milk entry, financial processing, and audit generation.",
+    description: "Video walkthroughs for milk entry, financial processing, and audit generation.",
     size: "External",
     type: "VIDEO",
+    fileUrl: "#",
     color: "text-purple-500",
     bg: "bg-purple-500/10",
     border: "border-purple-500/20",
@@ -47,9 +65,10 @@ const downloads = [
   {
     icon: Shield,
     title: "System Requirements Guide",
-    desc: "Hardware, OS, and network requirements for optimal performance.",
+    description: "Hardware, OS, and network requirements for optimal performance.",
     size: "0.5 MB",
     type: "PDF",
+    fileUrl: "#",
     color: "text-green-500",
     bg: "bg-green-500/10",
     border: "border-green-500/20",
@@ -57,16 +76,27 @@ const downloads = [
   {
     icon: FileText,
     title: "Banking Integration Guide",
-    desc: "Step-by-step guide for setting up bank integration and salary credits.",
+    description: "Step-by-step guide for setting up bank integration and salary credits.",
     size: "1.6 MB",
     type: "PDF",
+    fileUrl: "#",
     color: "text-cyan-500",
     bg: "bg-cyan-500/10",
     border: "border-cyan-500/20",
   },
 ]
 
-export default function SupportDownloads() {
+export default function SupportDownloads({ initialDownloads }: { initialDownloads?: any[] }) {
+  const displayDownloads = initialDownloads?.length ? initialDownloads.map(d => ({
+    ...d,
+    icon: d.category === "Video" ? Video : d.category === "Manual" ? Book : FileText,
+    size: "1.0 MB", // Placeholder
+    type: d.fileUrl.split('.').pop()?.toUpperCase() || "FILE",
+    color: d.category === "Manual" ? "text-blue-500" : d.category === "Video" ? "text-purple-500" : "text-amber-500",
+    bg: d.category === "Manual" ? "bg-blue-500/10" : d.category === "Video" ? "bg-purple-500/10" : "bg-amber-500/10",
+    border: d.category === "Manual" ? "border-blue-500/20" : d.category === "Video" ? "border-purple-500/20" : "border-amber-500/20",
+  })) : staticDownloads
+
   return (
     <section className="py-24 bg-[#F8FAFC]" id="downloads">
       <div className="container mx-auto px-4 md:px-6">
@@ -89,9 +119,9 @@ export default function SupportDownloads() {
         </motion.div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {downloads.map((item, i) => (
+          {displayDownloads.map((item, i) => (
             <motion.div
-              key={item.title}
+              key={item.id || item.title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -101,7 +131,7 @@ export default function SupportDownloads() {
             >
               <div className="flex items-start justify-between">
                 <div className={`w-11 h-11 rounded-xl ${item.bg} border ${item.border} flex items-center justify-center`}>
-                  <item.icon className={`w-5 h-5 ${item.color}`} />
+                  {item.icon && <item.icon className={`w-5 h-5 ${item.color}`} />}
                 </div>
                 <span className={`text-xs font-bold px-2.5 py-1 rounded-full ${item.bg} ${item.color} border ${item.border}`}>
                   {item.type}
@@ -109,14 +139,19 @@ export default function SupportDownloads() {
               </div>
               <div className="flex-1">
                 <h3 className="font-heading font-semibold text-primary text-base mb-1.5">{item.title}</h3>
-                <p className="text-gray-500 text-sm leading-relaxed">{item.desc}</p>
+                <p className="text-gray-500 text-sm leading-relaxed">{item.description || item.desc}</p>
               </div>
               <div className="flex items-center justify-between pt-2 border-t border-gray-100">
                 <span className="text-xs text-gray-400">{item.size}</span>
-                <button className={`inline-flex items-center gap-1.5 text-xs font-semibold ${item.color} hover:opacity-70 transition-opacity`}>
+                <a 
+                  href={item.fileUrl} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className={`inline-flex items-center gap-1.5 text-xs font-semibold ${item.color} hover:opacity-70 transition-opacity`}
+                >
                   <Download className="w-3.5 h-3.5" />
                   Download
-                </button>
+                </a>
               </div>
             </motion.div>
           ))}
@@ -125,3 +160,4 @@ export default function SupportDownloads() {
     </section>
   )
 }
+

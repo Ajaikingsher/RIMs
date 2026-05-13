@@ -35,7 +35,7 @@ export default function Footer() {
               <li><Link href="/solutions" className="hover:text-secondary transition-colors">Our Solutions</Link></li>
               <li><Link href="/features" className="hover:text-secondary transition-colors">Features</Link></li>
               <li><Link href="/leadership" className="hover:text-secondary transition-colors">Leadership</Link></li>
-              <li><Link href="/clients" className="hover:text-secondary transition-colors">Clients & Deployments</Link></li>
+
             </ul>
           </div>
 
@@ -71,9 +71,13 @@ export default function Footer() {
 
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
           <p>© {new Date().getFullYear()} RIMs Software Company. All rights reserved.</p>
-          <div className="flex gap-2">
-            <span>States Served:</span>
-            <span className="text-gray-400">Tamil Nadu • Kerala • Karnataka • Andhra Pradesh</span>
+          <div className="flex items-center gap-4">
+            <div className="flex gap-2">
+              <span>States Served:</span>
+              <span className="text-gray-400">Tamil Nadu • Kerala • Karnataka • Andhra Pradesh</span>
+            </div>
+            <span className="text-gray-800">•</span>
+            <Link href="/admin/login" className="hover:text-secondary transition-colors underline underline-offset-2">Admin Login</Link>
           </div>
         </div>
       </div>

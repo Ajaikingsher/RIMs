@@ -3,67 +3,48 @@
 import { motion } from "framer-motion"
 import { Award, Briefcase, GraduationCap } from "lucide-react"
 
-const leaders = [
-  {
-    name: "Shri. C. THANGARAJ",
-    role: "Founder & Chairman",
-    icon: Award,
-    color: "from-amber-500/20 to-amber-500/5",
-    border: "border-amber-500/30",
-    iconBg: "bg-amber-500/20",
-    iconColor: "text-amber-500",
-    bio: "Visionary entrepreneur who founded RIMs Software Company in 1996 with the mission of bringing enterprise technology to dairy cooperatives across South India. His 30+ years of leadership have shaped Gramya Paledu into the most trusted cooperative ERP in the region.",
-    initials: "CT",
-  },
-  {
-    name: "Shri. K. VELLINGIRI",
-    role: "Mentor",
-    subtitle: "Former Manager (Milk Production), AAVIN – Coimbatore",
-    icon: Briefcase,
-    color: "from-blue-500/20 to-blue-500/5",
-    border: "border-blue-500/30",
-    iconBg: "bg-blue-500/20",
-    iconColor: "text-blue-500",
-    bio: "With deep domain expertise as a former Milk Production Manager at AAVIN Coimbatore, Shri. Vellingiri provides invaluable industry guidance. His operational knowledge of dairy cooperative processes has been instrumental in shaping Gramya Paledu's feature set.",
-    initials: "KV",
-  },
-  {
-    name: "Dr. BABU RAJAGOPAL",
-    role: "Managing Director",
-    icon: GraduationCap,
-    color: "from-secondary/20 to-secondary/5",
-    border: "border-secondary/30",
-    iconBg: "bg-secondary/20",
-    iconColor: "text-secondary",
-    bio: "As Managing Director, Dr. Babu Rajagopal leads the overall strategy, product development, and client engagement for RIMs Software Company. His technical and managerial expertise drives the company's expansion across new states and cooperative sectors.",
-    initials: "BR",
-  },
-]
-
 const containerVariants = {
   hidden: {},
-  visible: { transition: { staggerChildren: 0.15 } },
+  visible: { transition: { staggerChildren: 0.1 } },
 }
 const cardVariants = {
-  hidden: { opacity: 0, y: 30 },
+  hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
 }
 
-export default function LeadershipGrid() {
+export default function LeadershipGrid({ initialLeaders = [] }: { initialLeaders?: any[] }) {
+  if (initialLeaders.length === 0) return null
+
+  const displayLeaders = initialLeaders.map(l => {
+    const isFounder = l.role.toLowerCase().includes("founder") || l.role.toLowerCase().includes("chairman")
+    const isMD = l.role.toLowerCase().includes("managing") || l.role.toLowerCase().includes("md")
+    
+    return {
+      ...l,
+      icon: isFounder ? Award : isMD ? GraduationCap : Briefcase,
+      accent: isFounder ? "text-amber-600" : isMD ? "text-secondary" : "text-blue-600",
+      bgAccent: isFounder ? "bg-amber-500/10" : isMD ? "bg-secondary/10" : "bg-blue-500/10",
+      borderAccent: isFounder ? "border-amber-500/20" : isMD ? "border-secondary/20" : "border-blue-500/20",
+      initials: l.name.split(" ").map((n: string) => n[0]).join("").substring(0, 2).toUpperCase(),
+      imagePosition: l.imagePosition || "50% 20%"
+    }
+  })
+
+
   return (
-    <section className="py-24 bg-[#F8FAFC]">
+    <section className="py-20 bg-[#F8FAFC]">
       <div className="container mx-auto px-4 md:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-14"
+          className="text-center mb-16"
         >
-          <span className="inline-block uppercase tracking-widest text-xs font-bold text-secondary mb-4 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20">
+          <span className="inline-block uppercase tracking-widest text-[11px] font-bold text-secondary mb-3 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20">
             Executive Leadership
           </span>
-          <h2 className="font-heading font-bold text-3xl md:text-4xl lg:text-5xl text-primary leading-tight">
+          <h2 className="font-heading font-bold text-3xl md:text-4xl text-primary leading-tight">
             Founders & Directors
           </h2>
         </motion.div>
@@ -73,29 +54,50 @@ export default function LeadershipGrid() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"
         >
-          {leaders.map((leader) => (
+          {displayLeaders.map((leader) => (
             <motion.div
-              key={leader.name}
+              key={leader.id}
               variants={cardVariants}
-              whileHover={{ y: -6 }}
-              className={`rounded-2xl border ${leader.border} bg-gradient-to-br ${leader.color} p-8 flex flex-col items-center text-center group cursor-default transition-all duration-300`}
+              whileHover={{ y: -5 }}
+              className={`relative bg-white rounded-3xl border border-gray-100 p-8 pt-12 text-center group transition-all duration-300 shadow-sm hover:shadow-xl hover:shadow-primary/5`}
             >
-              {/* Avatar */}
-              <div className={`w-24 h-24 rounded-full ${leader.iconBg} border-2 ${leader.border} flex items-center justify-center mb-5 text-2xl font-heading font-bold ${leader.iconColor} shadow-lg`}>
-                {leader.initials}
+              {/* Badge Icon */}
+              <div className={`absolute top-6 right-6 w-8 h-8 rounded-full ${leader.bgAccent} border ${leader.borderAccent} flex items-center justify-center ${leader.accent}`}>
+                <leader.icon className="w-4 h-4" />
               </div>
-              <div className={`inline-flex items-center justify-center w-8 h-8 rounded-lg ${leader.iconBg} mb-3`}>
-                <leader.icon className={`w-4 h-4 ${leader.iconColor}`} />
+
+              {/* Avatar - High-End Circular with Face Focus */}
+              <div className={`w-40 h-40 rounded-full mx-auto mb-6 relative z-10 overflow-hidden ring-8 ring-white shadow-2xl group-hover:shadow-secondary/20 transition-all duration-500`}>
+                {leader.image ? (
+                  <img 
+                    src={leader.image} 
+                    alt={leader.name} 
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                    style={{ objectPosition: leader.imagePosition }}
+                  />
+
+                ) : (
+
+
+
+                  <div className={`w-full h-full ${leader.bgAccent} flex items-center justify-center text-3xl font-heading font-bold ${leader.accent}`}>
+                    {leader.initials}
+                  </div>
+                )}
               </div>
-              <h3 className="font-heading font-bold text-xl text-primary mb-1">{leader.name}</h3>
-              <p className={`font-semibold text-sm ${leader.iconColor} mb-1`}>{leader.role}</p>
-              {leader.subtitle && (
-                <p className="text-gray-500 text-xs mb-4 italic">{leader.subtitle}</p>
-              )}
-              {!leader.subtitle && <div className="mb-4" />}
-              <p className="text-gray-600 text-sm leading-relaxed">{leader.bio}</p>
+
+              <h3 className="font-heading font-bold text-xl text-primary mb-1 group-hover:text-secondary transition-colors">
+                {leader.name}
+              </h3>
+              <p className={`font-semibold text-sm ${leader.accent} mb-4`}>
+                {leader.role}
+              </p>
+              <div className="w-10 h-0.5 bg-gray-100 mx-auto mb-5 group-hover:w-16 group-hover:bg-secondary transition-all" />
+              <p className="text-gray-500 text-sm leading-relaxed line-clamp-4">
+                {leader.bio}
+              </p>
             </motion.div>
           ))}
         </motion.div>
