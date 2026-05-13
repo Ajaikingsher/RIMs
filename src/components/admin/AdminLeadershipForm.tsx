@@ -36,7 +36,8 @@ export default function AdminLeadershipForm({ initialData, onClose }: { initialD
         imagePosition: pos
       })
     }
-  }, [initialData?.id])
+  }, [initialData])
+
 
   const handlePositionChange = (value: number) => {
     setVPosition(value)

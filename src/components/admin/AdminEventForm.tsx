@@ -53,7 +53,8 @@ export default function AdminEventForm({ initialData, onClose }: EventFormProps)
         images: []
       })
     }
-  }, [initialData?.id]) // Only reset if the ID changes (switching between events)
+  }, [initialData])
+
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
