@@ -1,4 +1,6 @@
+export const dynamic = "force-dynamic"
 import { getEvents } from "@/lib/supabase/actions"
+
 import AdminEventsList from "@/components/admin/AdminEventsList"
 import { Button } from "@/components/ui/button"
 import { Plus } from "lucide-react"

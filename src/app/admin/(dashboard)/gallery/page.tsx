@@ -1,4 +1,6 @@
+export const dynamic = "force-dynamic"
 import { getGalleryImages } from "@/lib/supabase/actions"
+
 import AdminGallery from "@/components/admin/AdminGallery"
 
 export default async function AdminGalleryPage() {

@@ -1,4 +1,6 @@
+export const dynamic = "force-dynamic"
 import { getDownloads } from "@/lib/supabase/actions"
+
 import AdminDownloadsList from "@/components/admin/AdminDownloadsList"
 
 export default async function AdminDownloadsPage() {

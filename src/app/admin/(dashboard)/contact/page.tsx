@@ -1,4 +1,6 @@
+export const dynamic = "force-dynamic"
 import { getContactMessages } from "@/lib/supabase/actions"
+
 import AdminContactList from "@/components/admin/AdminContactList"
 
 export default async function AdminContactPage() {

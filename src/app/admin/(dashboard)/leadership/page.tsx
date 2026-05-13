@@ -1,4 +1,6 @@
+export const dynamic = "force-dynamic"
 import { getLeadership } from "@/lib/supabase/actions"
+
 import AdminLeadershipList from "@/components/admin/AdminLeadershipList"
 
 export default async function AdminLeadershipPage() {
