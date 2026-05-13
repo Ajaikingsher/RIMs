@@ -17,9 +17,9 @@ export default async function SupportPage() {
   return (
     <>
       <SupportHero />
-      <SupportContact />
       <SupportRemote />
       <SupportDownloads initialDownloads={downloads} />
+
       <SupportFAQ />
       <CTASection />
     </>
