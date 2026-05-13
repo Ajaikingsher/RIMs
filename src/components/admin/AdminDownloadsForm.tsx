@@ -2,7 +2,8 @@
 
 import { useState } from "react"
 import { X, Loader2, Save, Link as LinkIcon } from "lucide-react"
-import { createDownload } from "@/lib/supabase/actions"
+import { createDownload, updateDownload } from "@/lib/supabase/actions"
+
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
