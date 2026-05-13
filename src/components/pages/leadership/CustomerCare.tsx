@@ -103,7 +103,7 @@ export default function CustomerCare({ members = [] }: { members?: any[] }) {
               <Headphones className="w-10 h-10 text-secondary" />
             </div>
             <h3 className="font-heading font-bold text-3xl text-white mb-4">Need Expert Assistance?</h3>
-            <p className="text-gray-400 text-lg mb-8 max-w-xl mx-auto italic">"Our mission is to ensure every society thrives with our technology. We're here for you six days a week."</p>
+            <p className="text-gray-400 text-lg mb-8 max-w-xl mx-auto italic">&quot;Our mission is to ensure every society thrives with our technology. We&apos;re here for you six days a week.&quot;</p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="tel:+919876543210" className="inline-flex items-center justify-center gap-3 px-10 py-4 rounded-2xl bg-secondary text-white text-base font-bold hover:bg-secondary/90 transition-all shadow-xl shadow-secondary/20 active:scale-95">

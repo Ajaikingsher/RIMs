@@ -67,8 +67,9 @@ export default function SupportFAQ() {
             Quick Answers to Common Questions
           </h2>
           <p className="text-gray-600 text-lg max-w-xl mx-auto">
-            Don't find your answer here? Contact our support team directly.
+            Don&apos;t find your answer here? Contact our support team directly.
           </p>
+
         </motion.div>
 
         <div className="max-w-3xl mx-auto space-y-3">

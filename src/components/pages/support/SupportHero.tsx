@@ -14,8 +14,9 @@ export default function SupportHero() {
             Help & Support
           </span>
           <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-6 max-w-3xl mx-auto">
-            We're Here to Help
+            We&apos;re Here to Help
           </h1>
+
           <p className="text-gray-300 text-lg leading-relaxed max-w-2xl mx-auto">
             Find answers, download resources, or connect with our support team via phone, WhatsApp, AnyDesk, or TeamViewer.
           </p>
