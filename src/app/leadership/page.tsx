@@ -1,4 +1,6 @@
+export const dynamic = "force-dynamic"
 import type { Metadata } from "next"
+
 import LeadershipHero from "@/components/pages/leadership/LeadershipHero"
 import LeadershipGrid from "@/components/pages/leadership/LeadershipGrid"
 import CoreTeam from "@/components/pages/leadership/CoreTeam"

@@ -1,4 +1,6 @@
+export const dynamic = "force-dynamic"
 import type { Metadata } from "next"
+
 import SupportHero from "@/components/pages/support/SupportHero"
 import SupportFAQ from "@/components/pages/support/SupportFAQ"
 import SupportDownloads from "@/components/pages/support/SupportDownloads"

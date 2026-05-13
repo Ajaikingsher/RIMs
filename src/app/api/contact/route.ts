@@ -1,6 +1,9 @@
 import { NextRequest, NextResponse } from "next/server"
 import prisma from "@/lib/prisma"
 
+export const dynamic = "force-dynamic"
+
+
 
 // Basic XSS sanitizer
 function sanitize(val: string): string {

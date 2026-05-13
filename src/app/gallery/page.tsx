@@ -1,4 +1,6 @@
+export const dynamic = "force-dynamic"
 import { getGalleryImages, getEvents } from "@/lib/supabase/actions"
+
 import GalleryHero from "@/components/pages/gallery/GalleryHero"
 import EventsShowcase from "@/components/pages/gallery/EventsShowcase"
 import PhotoGallery from "@/components/pages/gallery/PhotoGallery"
