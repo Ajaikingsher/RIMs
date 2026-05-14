@@ -71,10 +71,10 @@ export default function Hero() {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="inline-flex items-center gap-2 bg-secondary/20 border border-secondary/30 text-secondary text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-6"
+              className="inline-flex items-center gap-2 bg-secondary/20 border border-secondary/30 text-secondary text-[10px] md:text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-6 max-w-full"
             >
-              <span className="w-2 h-2 rounded-full bg-secondary animate-pulse" />
-              Trusted Since 1996 · Gramiya Paaledu Software
+              <span className="w-2 h-2 rounded-full bg-secondary animate-pulse shrink-0" />
+              Trusted Since 2009 · Gramiya Paaledu Software
             </motion.span>
 
 

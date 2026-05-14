@@ -16,11 +16,11 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
   title: {
-    default: "RIMs Software Company | Dairy Cooperative ERP Since 1996",
+    default: "RIMs Software Company | Dairy Cooperative ERP Since 2009",
     template: "%s | RIMs Software Company",
   },
   description:
-    "Empowering Dairy & Business Management Solutions Since 1996. Gramiya Paaledu ERP trusted by 4000+ Milk Cooperative Societies across South India.",
+    "Empowering Dairy & Business Management Solutions Since 2009. Gramiya Paaledu ERP trusted by 4000+ Milk Cooperative Societies across South India.",
   keywords: [
     "Dairy Cooperative ERP",
     "Gramiya Paaledu Software",
@@ -50,7 +50,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="overflow-x-hidden">
       <head>
         <script
           type="application/ld+json"
@@ -62,7 +62,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${plusJakartaSans.variable} ${outfit.variable} font-sans antialiased min-h-screen flex flex-col bg-[#F8FAFC]`}
+        className={`${plusJakartaSans.variable} ${outfit.variable} font-sans antialiased min-h-screen flex flex-col bg-[#F8FAFC] overflow-x-hidden`}
       >
         <ConditionalWrapper>
           {children}
