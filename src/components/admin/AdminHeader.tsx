@@ -22,7 +22,7 @@ export default function AdminHeader() {
   }, [])
 
   const handleLogout = async () => {
-    await supabase.signOut()
+    await supabase.auth.signOut()
     router.push("/admin/login")
     router.refresh()
   }
