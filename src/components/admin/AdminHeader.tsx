@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react"
 import { User, LogOut, Menu, X, LayoutDashboard, Calendar, Image as ImageIcon, Users, Download, Mail, Settings } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
+import Link from "next/link"
 import { usePathname, useRouter } from "next/navigation"
 import { supabase } from "@/lib/supabase/client"
 
