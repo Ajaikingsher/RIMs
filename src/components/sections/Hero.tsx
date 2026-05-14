@@ -210,8 +210,8 @@ export default function Hero() {
 
 
                   <img 
-                    src="/assets/newmin.png" 
-                    alt="Official Launch" 
+                    src="https://res.cloudinary.com/delk61fp0/image/upload/v1778769613/rims/assets/official_launch_minister.png" 
+                    alt="Official Launch by Hon. Minister Thangam Thennarasu" 
                     className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" 
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#050c18]/40 via-transparent to-transparent" />

@@ -6,7 +6,8 @@ import { supabase } from "@/lib/supabase/client"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { Loader2, Lock } from "lucide-react"
+import { Loader2, Lock, ArrowLeft } from "lucide-react"
+import Link from "next/link"
 
 export default function AdminLoginPage() {
   const [email, setEmail] = useState("")
@@ -43,7 +44,17 @@ export default function AdminLoginPage() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 p-4">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50 p-4">
+      <Link 
+        href="/" 
+        className="mb-8 inline-flex items-center gap-2 text-gray-500 hover:text-primary transition-all group"
+      >
+        <div className="p-2 rounded-full bg-white border border-gray-200 shadow-sm group-hover:shadow-md transition-all">
+          <ArrowLeft className="w-4 h-4" />
+        </div>
+        <span className="font-semibold text-sm">Back to Website</span>
+      </Link>
+      
       <div className="max-w-md w-full space-y-8 bg-white p-10 rounded-2xl border border-gray-200 shadow-xl shadow-primary/5">
         <div className="text-center">
           <div className="inline-flex items-center justify-center mb-6">
