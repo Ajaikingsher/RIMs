@@ -168,6 +168,17 @@ export async function updateLeadershipOrder(items: { id: string, order: number }
   )
 }
 
+export async function toggleLeadershipVisibility(id: string, isVisible: boolean) {
+  await ensureAuthenticated()
+  const leader = await prisma.leadership.update({
+    where: { id },
+    data: { isVisible }
+  })
+  revalidatePath("/admin/leadership")
+  revalidatePath("/leadership")
+  return leader
+}
+
 
 // ============================================================
 // DOWNLOADS ACTIONS

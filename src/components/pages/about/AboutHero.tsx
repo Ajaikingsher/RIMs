@@ -24,7 +24,7 @@ export default function AboutHero() {
           </h1>
           <p className="text-gray-300 text-lg leading-relaxed mb-4">
             Established in <strong className="text-white">1996</strong>, RIMs Software Company has been at the forefront of cooperative digitization across South India.
-            Our flagship product, <strong className="text-secondary">Gramya Paledu</strong>, has transformed how 4000+ dairy cooperative societies manage their daily operations, finances, and audits.
+            Our flagship product, <strong className="text-secondary">Gramiya Paaledu</strong>, has transformed how 4000+ dairy cooperative societies manage their daily operations, finances, and audits.
           </p>
           <p className="text-gray-400 text-base leading-relaxed">
             We are not just a software company — we are a long-standing technology partner for cooperatives, bringing enterprise-grade solutions to the grassroots of India's dairy economy.

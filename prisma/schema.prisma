@@ -39,6 +39,7 @@ model Leadership {
   bio           String?
   image         String?
   imagePosition String?  @default("50% 20%")
+  isVisible     Boolean  @default(true)
   order         Int      @default(0)
   createdAt     DateTime @default(now())
   updatedAt     DateTime @updatedAt

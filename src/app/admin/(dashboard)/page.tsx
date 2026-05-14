@@ -13,21 +13,34 @@ import Link from "next/link"
 import { formatDistanceToNow } from "date-fns"
 
 export default async function AdminDashboard() {
-  // Fetch real stats
-  const [eventCount, leaderCount, downloadCount, messageCount, recentMessages] = await Promise.all([
-    prisma.event.count(),
-    prisma.leadership.count(),
-    prisma.download.count(),
-    prisma.contactMessage.count({ where: { isRead: false } }),
-    prisma.contactMessage.findMany({
-      take: 5,
-      orderBy: { createdAt: 'desc' }
-    })
-  ])
+  // Fetch real stats with error handling
+  let eventCount = 0, leaderCount = 0, downloadCount = 0, messageCount = 0, recentMessages = []
+
+  try {
+    const [events, leaders, downloads, messages, recent] = await Promise.all([
+      prisma.event.count(),
+      prisma.leadership.count(),
+      prisma.download.count(),
+      prisma.contactMessage.count({ where: { isRead: false } }),
+      prisma.contactMessage.findMany({
+        take: 5,
+        orderBy: { createdAt: 'desc' }
+      })
+    ])
+    
+    eventCount = events
+    leaderCount = leaders
+    downloadCount = downloads
+    messageCount = messages
+    recentMessages = recent
+  } catch (error) {
+    console.error("[Database Error]: Failed to fetch dashboard stats. Check connection.", error)
+    // Counts remain 0, recentMessages remains empty array
+  }
 
   const stats = [
     { label: "Total Events", value: eventCount.toString(), icon: Calendar, color: "text-blue-600", bg: "bg-blue-50" },
-    { label: "Leadership Team", value: leaderCount.toString(), icon: Users, color: "text-green-600", bg: "bg-green-50" },
+    { label: "Management Teams", value: leaderCount.toString(), icon: Users, color: "text-green-600", bg: "bg-green-50" },
     { label: "Active Downloads", value: downloadCount.toString(), icon: Download, color: "text-amber-600", bg: "bg-amber-50" },
     { label: "Unread Messages", value: messageCount.toString(), icon: Mail, color: "text-red-600", bg: "bg-red-50" },
   ]
@@ -96,7 +109,7 @@ export default async function AdminDashboard() {
               <p className="text-xs text-gray-500">Publish or update corporate events</p>
             </Link>
             <Link href="/admin/leadership" className="block w-full p-4 rounded-xl border border-gray-100 hover:border-secondary hover:bg-secondary/5 text-left transition-all group">
-              <p className="font-semibold text-primary group-hover:text-secondary">Update Leadership</p>
+              <p className="font-semibold text-primary group-hover:text-secondary">Management Teams</p>
               <p className="text-xs text-gray-400">Manage team profiles and roles</p>
             </Link>
             <Link href="/admin/downloads" className="block w-full p-4 rounded-xl border border-gray-100 hover:border-secondary hover:bg-secondary/5 text-left transition-all group">

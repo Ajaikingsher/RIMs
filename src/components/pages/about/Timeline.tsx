@@ -10,7 +10,7 @@ const milestones = [
   },
   {
     year: "1998",
-    title: "Launch of 'Gramya Paledu'",
+    title: "Launch of 'Gramiya Paaledu'",
     description: "Our flagship ERP for dairy cooperatives officially launched, revolutionizing local society management.",
   },
   {

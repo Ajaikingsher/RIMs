@@ -18,7 +18,7 @@ export default function SolutionsHero() {
             Complete ERP Solutions for Dairy Cooperatives
           </h1>
           <p className="text-gray-300 text-lg leading-relaxed max-w-2xl mx-auto">
-            Gramya Paledu is a modular ERP platform — deploy the modules your cooperative needs today and scale as you grow.
+            Gramiya Paaledu is a modular ERP platform — deploy the modules your cooperative needs today and scale as you grow.
           </p>
         </motion.div>
       </div>

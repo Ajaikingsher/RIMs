@@ -81,7 +81,7 @@ export default function FeaturesSection() {
             Everything a Dairy Cooperative Needs
           </h2>
           <p className="text-gray-600 text-lg mt-5 max-w-2xl mx-auto">
-            Gramya Paledu is a complete ERP suite — from daily milk entry to annual audit — all in one integrated platform.
+            Gramiya Paaledu is a complete ERP suite — from daily milk entry to annual audit — all in one integrated platform.
           </p>
         </motion.div>
 

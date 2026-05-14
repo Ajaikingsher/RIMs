@@ -20,10 +20,10 @@ export const metadata: Metadata = {
     template: "%s | RIMs Software Company",
   },
   description:
-    "Empowering Dairy & Business Management Solutions Since 1996. Gramya Paledu ERP trusted by 4000+ Milk Cooperative Societies across South India.",
+    "Empowering Dairy & Business Management Solutions Since 1996. Gramiya Paaledu ERP trusted by 4000+ Milk Cooperative Societies across South India.",
   keywords: [
     "Dairy Cooperative ERP",
-    "Gramya Paledu Software",
+    "Gramiya Paaledu Software",
     "Aavin software",
     "BMC Units software",
     "Milk Collection Management",

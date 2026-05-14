@@ -9,15 +9,18 @@ import CTASection from "@/components/sections/CTASection"
 import { getLeadership } from "@/lib/supabase/actions"
 
 export const metadata: Metadata = {
-  title: "Leadership & Team | RIMs Software Company",
-  description: "Meet the experienced leadership team and dedicated staff behind RIMs Software Company and Gramya Paledu ERP.",
+  title: "Management Team | RIMs Software Company",
+  description: "Meet the experienced management team and dedicated staff behind RIMs Software Company and Gramiya Paaledu ERP.",
+
 }
 
 export default async function LeadershipPage() {
   const allMembers = await getLeadership()
+  // Only show members that are set as visible
+  const visibleMembers = allMembers.filter(m => m.isVisible !== false)
 
   // Ensure uniqueness by name just in case
-  const uniqueMembers = Array.from(new Map(allMembers.map(m => [m.name, m])).values())
+  const uniqueMembers = Array.from(new Map(visibleMembers.map(m => [m.name, m])).values())
 
   // Filter members into groups
   const executiveTeam = uniqueMembers.filter(m => {

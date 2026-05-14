@@ -9,8 +9,9 @@ const industries = [
   { icon: Droplets, title: "BMC Units", desc: "Bulk Milk Cooler unit operations and chilling centers.", count: "150+" },
   { icon: ShoppingCart, title: "Consumer Societies", desc: "Consumer cooperative societies and multi-purpose cooperatives.", count: "80+" },
   { icon: GraduationCap, title: "Schools", desc: "School cooperative stores and student welfare funds.", count: "60+" },
-  { icon: Factory, title: "Mills", desc: "Weavers' cooperative mills and handloom cooperative societies.", count: "40+" },
+  { icon: Factory, title: "Mills", desc: "Cooperative spinning mills and industrial cooperatives.", count: "40+" },
   { icon: Fuel, title: "Petrol Bunks", desc: "Cooperative petrol bunks with fuel and lubricant management.", count: "25+" },
+  { icon: ShoppingCart, title: "Weaving", desc: "Handloom and powerloom weavers' cooperative societies.", count: "120+" },
 ]
 
 const containerVariants = {

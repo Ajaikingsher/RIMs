@@ -30,9 +30,9 @@ const contactChannels = [
   {
     icon: Phone,
     title: "Phone Support",
-    detail: "+91 98765 43210",
+    detail: "+91 73588 59991",
     sub: "Mon–Sat, 9 AM – 6 PM IST",
-    action: "tel:+919876543210",
+    action: "tel:+917358859991",
     actionLabel: "Call Now",
   },
   {
@@ -40,7 +40,7 @@ const contactChannels = [
     title: "WhatsApp",
     detail: "+91 98765 43210",
     sub: "Instant response during business hours",
-    action: "https://wa.me/919876543210",
+    action: "https://wa.me/917358859991",
     actionLabel: "Open WhatsApp",
   },
   {

@@ -11,11 +11,10 @@ import { cn } from "@/lib/utils"
 
 const navigation = [
   { name: "Home", href: "/" },
-  { name: "About", href: "/about" },
+  { name: "About Us", href: "/about" },
+  { name: "Management Team", href: "/leadership" },
   { name: "Solutions", href: "/solutions" },
   { name: "Features", href: "/features" },
-  { name: "Leadership", href: "/leadership" },
-
   { name: "Gallery", href: "/gallery" },
   { name: "Support", href: "/support" },
   { name: "Contact", href: "/contact" },
@@ -40,7 +39,7 @@ export default function Navbar() {
       className={cn(
         "fixed top-0 w-full z-50 transition-all duration-300",
         isScrolled
-          ? "bg-white/90 backdrop-blur-md shadow-sm py-3"
+          ? "bg-white/80 backdrop-blur-xl shadow-md py-3"
           : "bg-transparent py-5"
       )}
     >
@@ -49,12 +48,27 @@ export default function Navbar() {
           <div className="flex lg:flex-1">
             <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-2">
               <span className="sr-only">RIMs Software Company</span>
-              <div className="font-heading font-bold text-2xl tracking-tighter text-primary">
-                RIMs<span className="text-secondary">.</span>
-              </div>
+              <motion.div
+                whileHover={{ scale: 1.05, filter: "brightness(1.1)" }}
+                whileTap={{ scale: 0.95 }}
+                className="relative group"
+              >
+                <img
+                  src="/assets/logo rims.jpeg"
+                  alt="RIMs Logo"
+                  className="h-20 w-auto rounded-2xl shadow-lg transition-all duration-500 group-hover:shadow-secondary/20"
+                />
+                {/* Interactive Glow Effect */}
+                <div className="absolute inset-0 rounded-2xl bg-secondary/0 group-hover:bg-secondary/5 transition-colors duration-500 -z-10 blur-xl" />
+              </motion.div>
+
+
+
+
             </Link>
+
           </div>
-          
+
           <div className="flex lg:hidden">
             <button
               type="button"
@@ -97,7 +111,7 @@ export default function Navbar() {
               className="bg-secondary hover:bg-secondary/90 text-white gap-2 rounded-full"
               asChild
             >
-              <a href="https://wa.me/1234567890" target="_blank" rel="noreferrer">
+              <a href="https://wa.me/917358859991" target="_blank" rel="noreferrer">
                 <Phone className="w-4 h-4" />
                 WhatsApp
               </a>
@@ -112,14 +126,16 @@ export default function Navbar() {
             initial={{ opacity: 0, x: "100%" }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: "100%" }}
-            transition={{ type: "spring", bounce: 0, duration: 0.4 }}
-            className="fixed inset-0 z-50 bg-white px-6 py-6 lg:hidden"
+            transition={{ type: "spring", damping: 25, stiffness: 200 }}
+            className="fixed inset-0 z-[60] bg-white/95 backdrop-blur-2xl px-6 py-6 lg:hidden flex flex-col"
           >
             <div className="flex items-center justify-between">
               <Link href="/" className="-m-1.5 p-1.5" onClick={() => setMobileMenuOpen(false)}>
                 <span className="sr-only">RIMs Software</span>
-                <div className="font-heading font-bold text-2xl text-primary">RIMs.</div>
+                <img src="/assets/logo rims.jpeg" alt="RIMs Logo" className="h-10 w-auto" />
               </Link>
+
+
               <button
                 type="button"
                 className="-m-2.5 rounded-md p-2.5 text-gray-700"
@@ -136,7 +152,12 @@ export default function Navbar() {
                     <Link
                       key={item.name}
                       href={item.href}
-                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                      className={cn(
+                        "-mx-3 block rounded-2xl px-4 py-4 text-lg font-bold transition-all active:scale-95",
+                        pathname === item.href 
+                          ? "bg-secondary/10 text-secondary" 
+                          : "text-gray-900 hover:bg-gray-50"
+                      )}
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       {item.name}
@@ -150,9 +171,14 @@ export default function Navbar() {
                   >
                     Switch to {language === "EN" ? "தமிழ்" : "English"}
                   </button>
-                  <Button className="w-full bg-secondary hover:bg-secondary/90 text-white gap-2">
-                    <Phone className="w-4 h-4" />
-                    WhatsApp
+                  <Button 
+                    className="w-full bg-secondary hover:bg-secondary/90 text-white gap-3 h-14 rounded-2xl text-lg font-bold shadow-lg shadow-secondary/20"
+                    asChild
+                  >
+                    <a href="https://wa.me/917358859991" target="_blank" rel="noreferrer">
+                      <Phone className="w-5 h-5" />
+                      Contact WhatsApp
+                    </a>
                   </Button>
                 </div>
               </div>

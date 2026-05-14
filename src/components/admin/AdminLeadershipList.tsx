@@ -1,8 +1,8 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Users, Edit2, Trash2, Plus, GripVertical, Loader2 } from "lucide-react"
-import { deleteLeadership, updateLeadershipOrder } from "@/lib/supabase/actions"
+import { Users, Edit2, Trash2, Plus, GripVertical, Loader2, Eye, EyeOff } from "lucide-react"
+import { deleteLeadership, updateLeadershipOrder, toggleLeadershipVisibility } from "@/lib/supabase/actions"
 import AdminLeadershipForm from "./AdminLeadershipForm"
 import { Button } from "@/components/ui/button"
 import ConfirmModal from "./ConfirmModal"
@@ -28,10 +28,11 @@ import {
 import { CSS } from '@dnd-kit/utilities'
 
 // --- Sortable Item Component ---
-function SortableLeaderItem({ leader, onEdit, onDelete }: { 
+function SortableLeaderItem({ leader, onEdit, onDelete, onToggleVisibility }: { 
   leader: any, 
   onEdit: (l: any) => void, 
-  onDelete: (id: string) => void 
+  onDelete: (id: string) => void,
+  onToggleVisibility: (id: string, current: boolean) => void
 }) {
   const {
     attributes,
@@ -71,6 +72,18 @@ function SortableLeaderItem({ leader, onEdit, onDelete }: {
       </div>
 
       <div className="flex gap-2">
+        <Button 
+          variant="outline" 
+          size="sm" 
+          className={`rounded-lg h-9 w-9 p-0 border-gray-200 ${leader.isVisible ? 'text-secondary hover:text-secondary' : 'text-gray-400 hover:text-gray-500'}`}
+          onClick={(e) => {
+            e.stopPropagation()
+            onToggleVisibility(leader.id, leader.isVisible)
+          }}
+          title={leader.isVisible ? "Visible in public" : "Hidden in public"}
+        >
+          {leader.isVisible ? <Eye className="w-4 h-4" /> : <EyeOff className="w-4 h-4" />}
+        </Button>
         <Button 
           variant="outline" 
           size="sm" 
@@ -170,6 +183,26 @@ export default function AdminLeadershipList({ initialLeadership }: { initialLead
     }
   }
 
+  const handleToggleVisibility = async (id: string, current: boolean) => {
+    const nextValue = !current
+    
+    // Optimistic update
+    setLeadership(items => items.map(l => 
+      l.id === id ? { ...l, isVisible: nextValue } : l
+    ))
+
+    try {
+      await toggleLeadershipVisibility(id, nextValue)
+      toast.success(nextValue ? "Member is now visible" : "Member is now hidden")
+    } catch (err) {
+      toast.error("Failed to update visibility")
+      // Revert on error
+      setLeadership(items => items.map(l => 
+        l.id === id ? { ...l, isVisible: current } : l
+      ))
+    }
+  }
+
   const handleClose = () => {
     setIsFormOpen(false)
     setEditingLeader(null)
@@ -217,6 +250,7 @@ export default function AdminLeadershipList({ initialLeadership }: { initialLead
                   leader={leader} 
                   onEdit={handleEdit} 
                   onDelete={handleDeleteRequest} 
+                  onToggleVisibility={handleToggleVisibility}
                 />
               ))
             )}

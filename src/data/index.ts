@@ -17,20 +17,22 @@ export const leadershipTeam: TeamMember[] = [
     name: "Shri. C. THANGARAJ",
     role: "Founder & Chairman",
     initials: "CT",
-    bio: "Visionary entrepreneur who founded RIMs in 1996, pioneering cooperative digitization across South India.",
+    bio: "Visionary entrepreneur who founded RIMs in 1996, pioneering cooperative digitization.",
+
   },
   {
     name: "Shri. K. VELLINGIRI",
     role: "Mentor",
     subtitle: "Former Manager (Milk Production), AAVIN – Coimbatore",
     initials: "KV",
-    bio: "Deep domain expertise from a decorated career at AAVIN Coimbatore guides Gramya Paledu's feature evolution.",
+    bio: "Deep domain expertise from a decorated career at AAVIN Coimbatore guides Gramiya Paaledu's feature evolution.",
   },
   {
     name: "Dr. BABU RAJAGOPAL",
     role: "Managing Director",
     initials: "BR",
-    bio: "Drives strategy, product development, and multi-state expansion at RIMs Software Company.",
+    bio: "Drives strategy, product development, and operational excellence at RIMs Software Company.",
+
   },
 ]
 
@@ -45,7 +47,7 @@ export const coreTeamMembers: TeamMember[] = [
     name: "Mr. R. VIGNESH",
     role: "Developer",
     initials: "RV",
-    bio: "Leads Gramya Paledu feature development and new module integrations.",
+    bio: "Leads Gramiya Paaledu feature development and new module integrations.",
   },
 ]
 
@@ -59,42 +61,22 @@ export const customerCareTeam: TeamMember[] = [
 export const stateDeployments: StateDeployment[] = [
   {
     state: "Tamil Nadu",
-    deployments: 3200,
+    deployments: 4000,
     districts: 38,
     flag: "🏛️",
-    desc: "Coimbatore, Erode, Salem, Madurai, Tirunelveli, Chennai, and 32 more districts.",
-  },
-  {
-    state: "Kerala",
-    deployments: 400,
-    districts: 14,
-    flag: "🌴",
-    desc: "Thrissur, Palakkad, Malappuram, and other major cooperative districts.",
-  },
-  {
-    state: "Karnataka",
-    deployments: 250,
-    districts: 10,
-    flag: "🏰",
-    desc: "Mysuru, Bengaluru Rural, Tumkur, Hassan, and expanding districts.",
-  },
-  {
-    state: "Andhra Pradesh",
-    deployments: 150,
-    districts: 8,
-    flag: "🌾",
-    desc: "Vijayawada, Guntur, Krishna, Nellore, and growing cooperatives.",
+    desc: "Coimbatore, Erode, Salem, Madurai, Tirunelveli, Chennai, and all 38 districts.",
   },
 ]
 
+
 export const faqData: FAQItem[] = [
   {
-    question: "What is Gramya Paledu and which cooperatives can use it?",
-    answer: "Gramya Paledu is a comprehensive ERP platform designed specifically for dairy cooperative societies, Aavin parlours, BMC units, consumer cooperatives, and other cooperative types. It handles everything from daily milk collection entry to annual audit report generation.",
+    question: "What is Gramiya Paaledu and which cooperatives can use it?",
+    answer: "Gramiya Paaledu is a comprehensive ERP platform designed specifically for dairy cooperative societies, Aavin parlours, BMC units, consumer cooperatives, and other cooperative types. It handles everything from daily milk collection entry to annual audit report generation.",
   },
   {
-    question: "Does Gramya Paledu support Tamil language?",
-    answer: "Yes — Gramya Paledu has complete Tamil language support. The entire user interface, all data entry screens, bills, and statutory registers can be operated in Tamil. The language switch works at login level.",
+    question: "Does Gramiya Paaledu support Tamil language?",
+    answer: "Yes — Gramiya Paaledu has complete Tamil language support. The entire user interface, all data entry screens, bills, and statutory registers can be operated in Tamil. The language switch works at login level.",
   },
   {
     question: "How long does installation and setup take?",
@@ -102,11 +84,11 @@ export const faqData: FAQItem[] = [
   },
   {
     question: "What government registers does the software generate automatically?",
-    answer: "Gramya Paledu generates 18+ statutory registers including: Milk Register, Payment Register, Cash Book, Ledger, Stock Register, Member Loan Register, Share Capital Register, Trial Balance, P&L Account, and Balance Sheet — all in government-mandated formats.",
+    answer: "Gramiya Paaledu generates 18+ statutory registers including: Milk Register, Payment Register, Cash Book, Ledger, Stock Register, Member Loan Register, Share Capital Register, Trial Balance, P&L Account, and Balance Sheet — all in government-mandated formats.",
   },
   {
     question: "Is banking integration available and with which banks?",
-    answer: "Yes. Gramya Paledu integrates with major nationalized banks including SBI, Canara Bank, and Indian Bank. Integration supports direct member salary credit, loan disbursement, and bank statement import.",
+    answer: "Yes. Gramiya Paaledu integrates with major nationalized banks including SBI, Canara Bank, and Indian Bank. Integration supports direct member salary credit, loan disbursement, and bank statement import.",
   },
   {
     question: "How is remote support provided?",
@@ -116,11 +98,13 @@ export const faqData: FAQItem[] = [
 
 export const companyTimeline = [
   { year: "1996", title: "Founded", description: "RIMs Software Company established in Coimbatore by Shri. C. Thangaraj." },
-  { year: "2000", title: "First 100 Deployments", description: "Gramya Paledu reached 100+ cooperative societies across Coimbatore and Erode districts." },
+  { year: "2000", title: "First 100 Deployments", description: "Gramiya Paaledu reached 100+ cooperative societies across Coimbatore and Erode districts." },
   { year: "2005", title: "Tamil Language Integration", description: "Full Tamil language support added — bilingual UI, Tamil statutory registers, and Tamil print-ready reports." },
   { year: "2010", title: "Banking Integration", description: "Integrated with nationalized banks for direct member salary credits and cooperative banking transactions." },
-  { year: "2015", title: "Multi-State Expansion", description: "Extended operations to Kerala, Karnataka, and Andhra Pradesh. Over 2000 societies running on Gramya Paledu." },
+  { year: "2015", title: "Enterprise Scaling", description: "Reached a major milestone with over 2000 societies running on the Gramiya Paaledu platform." },
+
   { year: "2018", title: "Audit Automation Launch", description: "Launched automated audit pack generation — one-click compliance reports for cooperative auditors." },
-  { year: "2022", title: "4000+ Deployments", description: "Milestone achieved: 4000+ active cooperative deployments across four states." },
+  { year: "2022", title: "4000+ Deployments", description: "Milestone achieved: 4000+ active cooperative deployments successfully operating." },
+
   { year: "2024", title: "Next-Gen Platform", description: "Launched modernized platform with cloud backup, remote support infrastructure, and enhanced analytics dashboards." },
 ]

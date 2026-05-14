@@ -98,7 +98,7 @@ export default function AdminEventForm({ initialData, onClose }: EventFormProps)
                 id="title"
                 value={formData.title}
                 onChange={(e) => setFormData(prev => ({ ...prev, title: e.target.value }))}
-                placeholder="Official Launch of Gramya Paledu"
+                placeholder="Official Launch of Gramiya Paaledu"
                 required
               />
             </div>

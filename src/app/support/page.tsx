@@ -10,7 +10,7 @@ import { getDownloads } from "@/lib/supabase/actions"
 
 export const metadata: Metadata = {
   title: "Support | RIMs Software Company",
-  description: "Get help with Gramya Paledu ERP — FAQ, downloads, remote support via AnyDesk & TeamViewer, and direct contact.",
+  description: "Get help with Gramiya Paaledu ERP — FAQ, downloads, remote support via AnyDesk & TeamViewer, and direct contact.",
 }
 
 export default async function SupportPage() {

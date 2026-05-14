@@ -29,7 +29,7 @@ export function generateSEOMetadata({
     description: fullDescription,
     keywords: [
       "Dairy Cooperative ERP",
-      "Gramya Paledu Software",
+      "Gramiya Paaledu Software",
       "Milk Cooperative Management",
       "Aavin Software",
       "BMC Unit Software",

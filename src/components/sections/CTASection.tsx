@@ -23,7 +23,7 @@ export default function CTASection() {
             Ready to Digitize Your Cooperative?
           </h2>
           <p className="text-gray-400 text-lg mb-10 max-w-xl mx-auto">
-            Join 4000+ cooperatives already running on Gramya Paledu. Request a live demo and see the difference.
+            Join 4000+ cooperatives already running on Gramiya Paaledu. Request a live demo and see the difference.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90 text-white rounded-full px-10 gap-2 shadow-lg shadow-secondary/25">

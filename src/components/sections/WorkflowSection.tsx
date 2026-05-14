@@ -59,7 +59,7 @@ export default function WorkflowSection() {
             From Entry to Audit in One Seamless Workflow
           </h2>
           <p className="text-gray-400 text-lg mt-5 max-w-xl mx-auto">
-            Gramya Paledu automates every step — eliminating manual errors and saving days of bookkeeping work.
+            Gramiya Paaledu automates every step — eliminating manual errors and saving days of bookkeeping work.
           </p>
         </motion.div>
 

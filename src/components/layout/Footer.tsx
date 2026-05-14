@@ -8,10 +8,12 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           <div className="space-y-4">
             <Link href="/" className="inline-block">
-              <span className="font-heading font-bold text-3xl tracking-tighter">
-                RIMs<span className="text-secondary">.</span>
-              </span>
+              <img src="/assets/logo rims.jpeg" alt="RIMs Logo" className="h-16 w-auto" />
             </Link>
+
+
+
+
             <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
               Digitizing Dairy Cooperative Management Since 1996. Trusted by 4000+ Milk Cooperative Societies Across South India.
             </p>
@@ -34,7 +36,7 @@ export default function Footer() {
               <li><Link href="/about" className="hover:text-secondary transition-colors">About Us</Link></li>
               <li><Link href="/solutions" className="hover:text-secondary transition-colors">Our Solutions</Link></li>
               <li><Link href="/features" className="hover:text-secondary transition-colors">Features</Link></li>
-              <li><Link href="/leadership" className="hover:text-secondary transition-colors">Leadership</Link></li>
+              <li><Link href="/leadership" className="hover:text-secondary transition-colors">Management</Link></li>
 
             </ul>
           </div>

@@ -167,7 +167,7 @@ export default function SolutionsList() {
           className="text-center mb-14"
         >
           <h2 className="font-heading font-bold text-3xl md:text-4xl text-primary leading-tight mb-4">
-            Gramya Paledu Module Suite
+            Gramiya Paaledu Module Suite
           </h2>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
             Each module is deeply integrated — your data flows seamlessly from milk entry to audit report.

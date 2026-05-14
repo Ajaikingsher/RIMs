@@ -18,7 +18,7 @@ export default function FeaturesHero() {
             Every Feature Your Cooperative Needs
           </h1>
           <p className="text-gray-300 text-lg leading-relaxed max-w-2xl mx-auto">
-            Gramya Paledu packs 30 years of cooperative domain knowledge into one integrated, audit-ready ERP platform.
+            Gramiya Paaledu packs 30 years of cooperative domain knowledge into one integrated, audit-ready ERP platform.
           </p>
         </motion.div>
       </div>

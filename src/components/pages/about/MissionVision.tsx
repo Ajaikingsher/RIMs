@@ -56,10 +56,10 @@ export default function MissionVision() {
               Rohan Info Mediaa Softwares (RIMs) was born in 1996 out of a simple observation: dairy cooperative societies in Tamil Nadu were struggling with complex manual bookkeeping, audit backlogs, and compliance challenges. Shri. C. Thangaraj, our Founder & Chairman, saw an opportunity to bring technology to the cooperatives that form the backbone of rural India's dairy economy.
             </p>
             <p>
-              The first version of Gramya Paledu was deployed in a small cooperative society in Coimbatore district. The response was immediate — what used to take days now took hours; what used to require expert accountants now empowered local staff to manage finances confidently.
+              The first version of Gramiya Paaledu was deployed in a small cooperative society in Coimbatore district. The response was immediate — what used to take days now took hours; what used to require expert accountants now empowered local staff to manage finances confidently.
             </p>
             <p>
-              Over three decades, with guidance from our Mentor Shri. K. Vellingiri — a former Milk Production Manager at AAVIN Coimbatore — we have refined Gramya Paledu into a comprehensive ERP platform that handles everything from daily milk entry to annual statutory audits.
+              Over three decades, with guidance from our Mentor Shri. K. Vellingiri — a former Milk Production Manager at AAVIN Coimbatore — we have refined Gramiya Paaledu into a comprehensive ERP platform that handles everything from daily milk entry to annual statutory audits.
             </p>
             <p>
               Today, under the leadership of Dr. Babu Rajagopal as Managing Director, RIMs continues to innovate — adding cloud capabilities, enhanced Tamil language support, and new integrations — while staying true to our founding principle: enterprise technology for every cooperative, everywhere.

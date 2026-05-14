@@ -12,13 +12,15 @@ export default function LeadershipHero() {
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
           <span className="inline-flex items-center gap-2 bg-secondary/20 border border-secondary/30 text-secondary text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-6">
             <Users className="w-3.5 h-3.5" />
-            Leadership & Team
+            Management Team
+
           </span>
           <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-6 max-w-3xl mx-auto">
-            The People Behind Gramya Paledu
+            The People Behind Gramiya Paaledu
           </h1>
           <p className="text-gray-300 text-lg leading-relaxed max-w-2xl mx-auto">
-            Experienced domain leaders, dedicated developers, and a passionate support team — together serving 4000+ cooperatives across South India since 1996.
+            Experienced domain leaders, dedicated developers, and a passionate support team — together serving 4000+ cooperatives since 1996.
+
           </p>
         </motion.div>
       </div>

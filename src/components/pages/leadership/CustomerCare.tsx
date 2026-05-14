@@ -110,7 +110,7 @@ export default function CustomerCare({ members = [] }: { members?: any[] }) {
                 <Phone className="w-5 h-5" />
                 Call Support
               </a>
-              <a href="https://wa.me/1234567890" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-3 px-10 py-4 rounded-2xl border-2 border-white/10 text-white text-base font-bold hover:bg-white/5 hover:border-white/20 transition-all active:scale-95">
+              <a href="https://wa.me/917358859991" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-3 px-10 py-4 rounded-2xl border-2 border-white/10 text-white text-base font-bold hover:bg-white/5 hover:border-white/20 transition-all active:scale-95">
                 <MessageSquare className="w-5 h-5" />
                 WhatsApp
               </a>

@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 
 const testimonials = [
   {
-    quote: "Gramya Paledu has transformed our cooperative. Audit reports that used to take weeks now generate in minutes. The Tamil interface made adoption seamless for our staff.",
+    quote: "Gramiya Paaledu has transformed our cooperative. Audit reports that used to take weeks now generate in minutes. The Tamil interface made adoption seamless for our staff.",
     author: "Secretary, Primary Dairy Cooperative",
     location: "Coimbatore, Tamil Nadu",
     initials: "RS",

@@ -37,13 +37,20 @@ export default function AdminSidebar() {
   }
 
   return (
-    <div className="w-64 bg-primary text-white flex flex-col h-screen fixed left-0 top-0 z-40">
+    <div className="hidden lg:flex w-64 bg-primary text-white flex-col h-screen fixed left-0 top-0 z-40">
       <div className="p-6 border-b border-white/10">
-        <Link href="/admin" className="flex items-center gap-2">
-          <span className="font-heading font-bold text-2xl tracking-tighter">
-            RIMs<span className="text-secondary">Admin</span>
-          </span>
+        <Link href="/admin" className="flex items-center gap-2 group">
+          <img 
+            src="/assets/logo rims.jpeg" 
+            alt="RIMs Logo" 
+            className="h-16 w-auto rounded-xl shadow-lg transition-all duration-300 group-hover:scale-105 group-hover:shadow-secondary/10" 
+          />
         </Link>
+
+
+
+
+
       </div>
 
       <nav className="flex-grow p-4 space-y-2 overflow-y-auto">

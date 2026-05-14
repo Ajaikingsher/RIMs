@@ -12,7 +12,7 @@ const info = [
   {
     icon: Phone,
     title: "Phone",
-    lines: ["+91 98765 43210", "+91 87654 32109"],
+    lines: ["+91 73588 59991"],
   },
   {
     icon: Mail,
@@ -37,7 +37,8 @@ export default function ContactInfo() {
     >
       {/* WhatsApp card */}
       <a
-        href="https://wa.me/919876543210?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20Gramya%20Paledu%20ERP."
+        href="https://wa.me/917358859991?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20Gramiya%20Paaledu%20ERP."
+
         target="_blank"
         rel="noreferrer"
         className="flex items-center gap-4 rounded-2xl bg-[#25D366] p-5 text-white group hover:bg-[#1ebe5d] transition-colors"

@@ -26,7 +26,7 @@ export default function TermsPage() {
           <section className="space-y-4">
             <h2 className="text-2xl font-heading font-semibold text-primary">2. Description of Service</h2>
             <p>
-              RIMs provides specialized Enterprise Resource Planning (ERP) software, including the "Gramya Paledu" system, designed for Milk Cooperative Societies, BMC units, and related dairy industry operations. Our services include software licensing, implementation, support, and maintenance.
+              RIMs provides specialized Enterprise Resource Planning (ERP) software, including the "Gramiya Paaledu" system, designed for Milk Cooperative Societies, BMC units, and related dairy industry operations. Our services include software licensing, implementation, support, and maintenance.
             </p>
           </section>
 

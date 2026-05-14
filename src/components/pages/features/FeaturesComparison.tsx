@@ -28,13 +28,13 @@ export default function FeaturesComparison() {
           className="text-center mb-14"
         >
           <span className="inline-block uppercase tracking-widest text-xs font-bold text-secondary mb-4 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20">
-            Why Gramya Paledu
+            Why Gramiya Paaledu
           </span>
           <h2 className="font-heading font-bold text-3xl md:text-4xl text-primary leading-tight mb-4">
             Built for Cooperatives, Not Adapted for Them
           </h2>
           <p className="text-gray-600 text-lg max-w-xl mx-auto">
-            Generic accounting software misses the core of cooperative ERP. Gramya Paledu was built ground-up for this domain.
+            Generic accounting software misses the core of cooperative ERP. Gramiya Paaledu was built ground-up for this domain.
           </p>
         </motion.div>
 
@@ -48,7 +48,7 @@ export default function FeaturesComparison() {
           {/* Header */}
           <div className="grid grid-cols-3 bg-primary text-white">
             <div className="p-4 font-heading font-semibold text-sm">Feature</div>
-            <div className="p-4 font-heading font-semibold text-sm text-center text-secondary">Gramya Paledu</div>
+            <div className="p-4 font-heading font-semibold text-sm text-center text-secondary">Gramiya Paaledu</div>
             <div className="p-4 font-heading font-semibold text-sm text-center text-gray-400">Generic Software</div>
           </div>
           {/* Rows */}

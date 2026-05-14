@@ -15,7 +15,7 @@ export default function ClientsHero() {
             Clients & Deployments
           </span>
           <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-6 max-w-3xl mx-auto">
-            4000+ Cooperatives Trust Gramya Paledu
+            4000+ Cooperatives Trust Gramiya Paaledu
           </h1>
           <p className="text-gray-300 text-lg leading-relaxed max-w-2xl mx-auto">
             From small village dairy societies to large apex cooperatives — RIMs Software powers cooperative management across four states.

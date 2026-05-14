@@ -3,7 +3,7 @@ export const SITE_CONFIG = {
   brand: "Rohan Info Mediaa Softwares",
   tagline: "Empowering Dairy & Business Management Solutions Since 1996",
   established: 1996,
-  product: "Gramya Paledu",
+  product: "Gramiya Paaledu",
   phone: "+91 98765 43210",
   whatsapp: "919876543210",
   email: "contact@rimssoftware.com",
@@ -24,11 +24,10 @@ export const SITE_CONFIG = {
   stats: {
     deployments: 4000,
     years: 30,
-    states: 4,
     languages: 2,
   },
-  states: ["Tamil Nadu", "Kerala", "Karnataka", "Andhra Pradesh"],
 }
+
 
 export const NAV_LINKS = [
   { name: "Home", href: "/" },

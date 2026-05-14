@@ -46,9 +46,12 @@ export default function AdminLoginPage() {
     <div className="min-h-screen flex items-center justify-center bg-gray-50 p-4">
       <div className="max-w-md w-full space-y-8 bg-white p-10 rounded-2xl border border-gray-200 shadow-xl shadow-primary/5">
         <div className="text-center">
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary text-white mb-6">
-            <Lock className="w-8 h-8" />
+          <div className="inline-flex items-center justify-center mb-6">
+            <img src="/assets/logo rims.jpeg" alt="RIMs Logo" className="h-24 w-auto" />
           </div>
+
+
+
           <h1 className="text-3xl font-heading font-bold text-primary">Admin Access</h1>
           <p className="mt-2 text-gray-500">Sign in to manage RIMs platform</p>
         </div>

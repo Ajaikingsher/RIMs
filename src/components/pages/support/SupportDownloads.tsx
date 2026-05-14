@@ -20,7 +20,7 @@ interface DownloadItem {
 const staticDownloads: DownloadItem[] = [
   {
     icon: FileText,
-    title: "Gramya Paledu User Manual",
+    title: "Gramiya Paaledu User Manual",
     description: "Complete operator guide — milk entry, payment, reports, Tamil & English.",
     size: "4.2 MB",
     type: "PDF",
@@ -114,7 +114,7 @@ export default function SupportDownloads({ initialDownloads }: { initialDownload
             Resources & Documentation
           </h2>
           <p className="text-gray-600 text-lg max-w-xl mx-auto">
-            Download manuals, guides, and format templates for Gramya Paledu ERP.
+            Download manuals, guides, and format templates for Gramiya Paaledu ERP.
           </p>
         </motion.div>
 

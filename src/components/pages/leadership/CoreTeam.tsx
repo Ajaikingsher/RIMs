@@ -37,7 +37,7 @@ export default function CoreTeam({ members = [] }: { members?: any[] }) {
             The Engine Room
           </h2>
           <p className="text-gray-500 mt-6 max-w-2xl mx-auto text-lg leading-relaxed">
-            Our technical team keeps Gramya Paledu running reliably for thousands of societies every single day.
+            Our technical team keeps Gramiya Paaledu running reliably for thousands of societies every single day.
           </p>
         </motion.div>
 

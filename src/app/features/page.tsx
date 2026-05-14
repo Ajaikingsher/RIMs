@@ -5,8 +5,8 @@ import FeaturesComparison from "@/components/pages/features/FeaturesComparison"
 import CTASection from "@/components/sections/CTASection"
 
 export const metadata: Metadata = {
-  title: "Features | RIMs Software – Gramya Paledu Capabilities",
-  description: "Explore all features of Gramya Paledu ERP — milk collection, audit automation, banking integration, Tamil support, and more.",
+  title: "Features | RIMs Software – Gramiya Paaledu Capabilities",
+  description: "Explore all features of Gramiya Paaledu ERP — milk collection, audit automation, banking integration, Tamil support, and more.",
 }
 
 export default function FeaturesPage() {

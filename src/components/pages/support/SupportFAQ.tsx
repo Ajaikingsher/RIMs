@@ -6,12 +6,12 @@ import { ChevronDown } from "lucide-react"
 
 const faqs = [
   {
-    question: "What is Gramya Paledu and which cooperatives can use it?",
-    answer: "Gramya Paledu is a comprehensive ERP platform designed specifically for dairy cooperative societies, Aavin parlours, BMC units, consumer cooperatives, and other cooperative types. It handles everything from daily milk collection entry to annual audit report generation.",
+    question: "What is Gramiya Paaledu and which cooperatives can use it?",
+    answer: "Gramiya Paaledu is a comprehensive ERP platform designed specifically for dairy cooperative societies, Aavin parlours, BMC units, consumer cooperatives, and other cooperative types. It handles everything from daily milk collection entry to annual audit report generation.",
   },
   {
-    question: "Does Gramya Paledu support Tamil language?",
-    answer: "Yes — Gramya Paledu has complete Tamil language support. The entire user interface, all data entry screens, bills, and statutory registers can be operated in Tamil. The language switch works at login level, so each operator can choose their preferred language.",
+    question: "Does Gramiya Paaledu support Tamil language?",
+    answer: "Yes — Gramiya Paaledu has complete Tamil language support. The entire user interface, all data entry screens, bills, and statutory registers can be operated in Tamil. The language switch works at login level, so each operator can choose their preferred language.",
   },
   {
     question: "How long does installation and setup take?",
@@ -19,11 +19,11 @@ const faqs = [
   },
   {
     question: "What government registers does the software generate automatically?",
-    answer: "Gramya Paledu generates 18+ statutory registers including: Milk Register (Form A), Payment Register, Cash Book, Ledger, Stock Register, Member Loan Register, Share Capital Register, Trial Balance, P&L Account, and Balance Sheet — all in government-mandated formats.",
+    answer: "Gramiya Paaledu generates 18+ statutory registers including: Milk Register (Form A), Payment Register, Cash Book, Ledger, Stock Register, Member Loan Register, Share Capital Register, Trial Balance, P&L Account, and Balance Sheet — all in government-mandated formats.",
   },
   {
     question: "Is banking integration available and with which banks?",
-    answer: "Yes. Gramya Paledu integrates with major nationalized banks including State Bank of India, Canara Bank, Indian Bank, and others. Integration supports direct member salary credit, loan disbursement, and bank statement import for reconciliation.",
+    answer: "Yes. Gramiya Paaledu integrates with major nationalized banks including State Bank of India, Canara Bank, Indian Bank, and others. Integration supports direct member salary credit, loan disbursement, and bank statement import for reconciliation.",
   },
   {
     question: "How is remote support provided?",
@@ -31,18 +31,18 @@ const faqs = [
   },
   {
     question: "Is the software suitable for multi-branch or apex cooperative use?",
-    answer: "Yes. Gramya Paledu supports multi-branch operation with consolidated reporting. Apex cooperative societies can view aggregated reports across all member societies from a centralized dashboard.",
+    answer: "Yes. Gramiya Paaledu supports multi-branch operation with consolidated reporting. Apex cooperative societies can view aggregated reports across all member societies from a centralized dashboard.",
   },
   {
-    question: "What are the hardware requirements for running Gramya Paledu?",
-    answer: "Gramya Paledu runs on standard Windows PCs (Windows 10 or later). Minimum recommended specs: 4GB RAM, 100GB HDD, Intel Core i3 or equivalent processor. For multi-user networks, a basic server or NAS is recommended.",
+    question: "What are the hardware requirements for running Gramiya Paaledu?",
+    answer: "Gramiya Paaledu runs on standard Windows PCs (Windows 10 or later). Minimum recommended specs: 4GB RAM, 100GB HDD, Intel Core i3 or equivalent processor. For multi-user networks, a basic server or NAS is recommended.",
   },
   {
     question: "How are software updates delivered?",
     answer: "Updates are delivered remotely by our support team. Critical compliance updates (for government regulation changes) are pushed as priority patches. Major version upgrades are announced with training support.",
   },
   {
-    question: "What is the pricing model for Gramya Paledu?",
+    question: "What is the pricing model for Gramiya Paaledu?",
     answer: "Pricing is based on the cooperative size, number of users, and modules required. We offer flexible annual licensing with full support included. Contact us for a customized quote based on your cooperative's needs.",
   },
 ]

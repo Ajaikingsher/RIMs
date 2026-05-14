@@ -25,8 +25,8 @@ export default function SupportHero() {
               <span className="w-2 h-2 rounded-full bg-secondary animate-pulse" />
               Mon–Sat: 9 AM – 6 PM IST
             </div>
-            <a href="tel:+919876543210" className="inline-flex items-center gap-2 bg-secondary/20 border border-secondary/30 rounded-full px-5 py-2.5 text-secondary text-sm font-semibold hover:bg-secondary/30 transition-colors">
-              +91 98765 43210
+            <a href="tel:+917358859991" className="inline-flex items-center gap-2 bg-secondary/20 border border-secondary/30 rounded-full px-5 py-2.5 text-secondary text-sm font-semibold hover:bg-secondary/30 transition-colors">
+              +91 73588 59991
             </a>
           </div>
         </motion.div>
