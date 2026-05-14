@@ -19,7 +19,8 @@ export default function AdminLeadershipForm({ initialData, onClose }: { initialD
     bio: "",
     order: 0,
     image: "",
-    imagePosition: "50% 20%"
+    imagePosition: "50% 20%",
+    isVisible: true
   })
 
   useEffect(() => {
@@ -33,7 +34,8 @@ export default function AdminLeadershipForm({ initialData, onClose }: { initialD
         bio: initialData.bio || "",
         order: initialData.order || 0,
         image: initialData.image || "",
-        imagePosition: pos
+        imagePosition: pos,
+        isVisible: initialData.isVisible !== false
       })
     }
   }, [initialData])

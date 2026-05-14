@@ -14,7 +14,7 @@ import { formatDistanceToNow } from "date-fns"
 
 export default async function AdminDashboard() {
   // Fetch real stats with error handling
-  let eventCount = 0, leaderCount = 0, downloadCount = 0, messageCount = 0, recentMessages = []
+  let eventCount = 0, leaderCount = 0, downloadCount = 0, messageCount = 0, recentMessages: any[] = []
 
   try {
     const [events, leaders, downloads, messages, recent] = await Promise.all([
