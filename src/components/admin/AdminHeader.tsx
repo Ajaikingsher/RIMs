@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import Link from "next/link"
 import { usePathname, useRouter } from "next/navigation"
 import { supabase } from "@/lib/supabase/client"
+import { cn } from "@/lib/utils"
 
 export default function AdminHeader() {
   const [user, setUser] = useState<any>(null)
