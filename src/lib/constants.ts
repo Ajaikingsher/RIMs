@@ -1,11 +1,11 @@
 export const SITE_CONFIG = {
   name: "RIMs Software Company",
   brand: "Rohan Info Mediaa Softwares",
-  tagline: "Empowering Dairy & Business Management Solutions Since 1996",
-  established: 1996,
+  tagline: "Empowering Dairy & Business Management Solutions Since 2009",
+  established: 2009,
   product: "Gramiya Paaledu",
-  phone: "+91 98765 43210",
-  whatsapp: "919876543210",
+  phone: "+91 73588 59991",
+  whatsapp: "917358859991",
   email: "contact@rimssoftware.com",
   supportEmail: "support@rimssoftware.com",
   address: {
@@ -23,9 +23,10 @@ export const SITE_CONFIG = {
   },
   stats: {
     deployments: 4000,
-    years: 30,
+    years: 17,
     languages: 2,
   },
+  states: ["Tamil Nadu", "Kerala", "Karnataka", "Andhra Pradesh"],
 }
 
 

@@ -16,7 +16,7 @@ export function generateSEOMetadata({
 }: SEOProps = {}): Metadata {
   const fullTitle = title
     ? `${title} | ${SITE_CONFIG.name}`
-    : `${SITE_CONFIG.name} | Dairy Cooperative ERP Since 1996`
+    : `${SITE_CONFIG.name} | Dairy Cooperative ERP Since 2009`
 
   const fullDescription =
     description ||
