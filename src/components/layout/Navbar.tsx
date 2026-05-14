@@ -54,7 +54,7 @@ export default function Navbar() {
                 className="relative group"
               >
                 <img
-                  src="/assets/logo rims.jpeg"
+                  src="https://res.cloudinary.com/delk61fp0/image/upload/v1778770217/rims/assets/rims_logo_main.jpg"
                   alt="RIMs Logo"
                   className="h-20 w-auto rounded-2xl shadow-lg transition-all duration-500 group-hover:shadow-secondary/20"
                 />
@@ -132,7 +132,7 @@ export default function Navbar() {
             <div className="flex items-center justify-between">
               <Link href="/" className="-m-1.5 p-1.5" onClick={() => setMobileMenuOpen(false)}>
                 <span className="sr-only">RIMs Software</span>
-                <img src="/assets/logo rims.jpeg" alt="RIMs Logo" className="h-10 w-auto" />
+                <img src="https://res.cloudinary.com/delk61fp0/image/upload/v1778770217/rims/assets/rims_logo_main.jpg" alt="RIMs Logo" className="h-10 w-auto" />
               </Link>
 
 

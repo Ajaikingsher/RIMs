@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "RIMs Software Company" }],
   icons: {
-    icon: "/favicon.svg",
+    icon: "https://res.cloudinary.com/delk61fp0/image/upload/v1778770217/rims/assets/rims_logo_main.jpg",
   },
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_SITE_URL || "https://www.rimssoftware.com"

@@ -100,7 +100,7 @@ export default function AdminHeader() {
               className="fixed inset-y-0 left-0 w-72 bg-primary text-white z-[70] lg:hidden flex flex-col"
             >
               <div className="p-6 border-b border-white/10 flex items-center justify-between">
-                <img src="/assets/logo rims.jpeg" alt="Logo" className="h-12 w-auto rounded-lg" />
+                <img src="https://res.cloudinary.com/delk61fp0/image/upload/v1778770217/rims/assets/rims_logo_main.jpg" alt="Logo" className="h-12 w-auto rounded-lg" />
                 <button onClick={() => setIsMobileMenuOpen(false)} className="p-2 hover:bg-white/10 rounded-lg">
                   <X className="w-6 h-6" />
                 </button>
