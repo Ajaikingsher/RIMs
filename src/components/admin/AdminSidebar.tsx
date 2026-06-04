@@ -11,7 +11,8 @@ import {
   Download, 
   Settings, 
   LogOut,
-  Mail
+  Mail,
+  Landmark
 } from "lucide-react"
 import { cn } from "@/lib/utils"
 
@@ -19,6 +20,7 @@ const menuItems = [
   { name: "Dashboard", href: "/admin", icon: LayoutDashboard },
   { name: "Events", href: "/admin/events", icon: Calendar },
   { name: "Gallery", href: "/admin/gallery", icon: ImageIcon },
+  { name: "Milestones", href: "/admin/milestones", icon: Landmark },
   { name: "Leadership", href: "/admin/leadership", icon: Users },
   { name: "Downloads", href: "/admin/downloads", icon: Download },
   { name: "Messages", href: "/admin/contact", icon: Mail },

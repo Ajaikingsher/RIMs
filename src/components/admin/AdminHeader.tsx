@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { User, LogOut, Menu, X, LayoutDashboard, Calendar, Image as ImageIcon, Users, Download, Mail, Settings } from "lucide-react"
+import { User, LogOut, Menu, X, LayoutDashboard, Calendar, Image as ImageIcon, Users, Download, Mail, Settings, Landmark } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 import Link from "next/link"
 import { usePathname, useRouter } from "next/navigation"
@@ -33,6 +33,7 @@ export default function AdminHeader() {
     { name: "Dashboard", href: "/admin", icon: LayoutDashboard },
     { name: "Events", href: "/admin/events", icon: Calendar },
     { name: "Gallery", href: "/admin/gallery", icon: ImageIcon },
+    { name: "Milestones", href: "/admin/milestones", icon: Landmark },
     { name: "Leadership", href: "/admin/leadership", icon: Users },
     { name: "Downloads", href: "/admin/downloads", icon: Download },
     { name: "Messages", href: "/admin/contact", icon: Mail },

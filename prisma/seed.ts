@@ -89,6 +89,24 @@ async function main() {
     })
   }
   console.log("✅ Created events")
+ 
+  // 4. Milestones
+  const milestones = [
+    {
+      title: "Official Software Release @ Coimbatore",
+      description: "We were honored to have Hon. Minister Thangam Thennarasu officially launch our flagship enterprise software, setting the foundation for statewide rural digitization.",
+      image: "https://res.cloudinary.com/delk61fp0/image/upload/v1778769613/rims/assets/official_launch_minister.png",
+      imagePosition: "50% 20%",
+      order: 1,
+    }
+  ]
+
+  for (const milestone of milestones) {
+    await prisma.milestone.create({
+      data: milestone
+    })
+  }
+  console.log("✅ Created milestones/slideshow")
 
   console.log("\n🎉 Seed complete!")
 }

@@ -61,39 +61,64 @@ export default function EventsShowcase({ initialEvents }: EventsShowcaseProps) {
                 className="lg:w-[55%] grid grid-cols-1 md:grid-cols-2 gap-8 items-start"
               >
                 {event.images && event.images.length > 0 ? (
-                  <>
-                    <div className="space-y-8 flex flex-col items-center">
+                  event.images.length === 1 ? (
+                    <div className="col-span-2 rounded-2xl overflow-hidden border border-gray-100 shadow-lg bg-gray-50 w-full flex justify-center">
+                      <img 
+                        src={event.images[0].url} 
+                        alt={event.title} 
+                        className="max-w-full h-auto object-contain max-h-[500px]" 
+                      />
+                    </div>
+                  ) : event.images.length === 2 ? (
+                    <>
                       <div className="rounded-2xl overflow-hidden border border-gray-100 shadow-lg bg-gray-50 w-full flex justify-center">
                         <img 
                           src={event.images[0].url} 
                           alt={event.title} 
-                          className="max-w-full h-auto object-contain" 
+                          className="max-w-full h-auto object-contain max-h-[400px]" 
                         />
                       </div>
-                      {event.images[1] && (
+                      <div className="rounded-2xl overflow-hidden border border-gray-100 shadow-lg bg-gray-50 w-full flex justify-center">
+                        <img 
+                          src={event.images[1].url} 
+                          alt={event.title} 
+                          className="max-w-full h-auto object-contain max-h-[400px]" 
+                        />
+                      </div>
+                    </>
+                  ) : (
+                    <>
+                      <div className="space-y-6 flex flex-col items-center w-full">
                         <div className="rounded-2xl overflow-hidden border border-gray-100 shadow-lg bg-gray-50 w-full flex justify-center">
                           <img 
-                            src={event.images[1].url} 
+                            src={event.images[0].url} 
                             alt={event.title} 
                             className="max-w-full h-auto object-contain" 
                           />
+                        </div>
+                        {event.images[1] && (
+                          <div className="rounded-2xl overflow-hidden border border-gray-100 shadow-lg bg-gray-50 w-full flex justify-center">
+                            <img 
+                              src={event.images[1].url} 
+                              alt={event.title} 
+                              className="max-w-full h-auto object-contain" 
+                            />
+                          </div>
+                        )}
+                      </div>
+                      {event.images[2] && (
+                        <div className="flex flex-col justify-start items-center w-full">
+                          <div className="rounded-2xl overflow-hidden border border-gray-100 shadow-lg bg-gray-50 w-full flex justify-center">
+                            <img 
+                              src={event.images[2].url} 
+                              alt={event.title} 
+                              className="max-w-full h-auto object-contain" 
+                            />
+                          </div>
                         </div>
                       )}
-                    </div>
-                    {event.images[2] && (
-                      <div className="flex flex-col justify-start items-center">
-                        <div className="rounded-2xl overflow-hidden border border-gray-100 shadow-lg bg-gray-50 w-full flex justify-center">
-                          <img 
-                            src={event.images[2].url} 
-                            alt={event.title} 
-                            className="max-w-full h-auto object-contain" 
-                          />
-                        </div>
-                      </div>
-                    )}
-                  </>
-
-
+                    </>
+                  )
                 ) : (
                   <div className="col-span-2 h-80 bg-gray-50 rounded-2xl flex items-center justify-center text-gray-400">
                     No images available for this event.

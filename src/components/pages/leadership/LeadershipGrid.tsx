@@ -45,7 +45,7 @@ export default function LeadershipGrid({ initialLeaders = [] }: { initialLeaders
             Executive Leadership
           </span>
           <h2 className="font-heading font-bold text-3xl md:text-4xl text-primary leading-tight">
-            Founders & Directors
+            Management Team
           </h2>
         </motion.div>
 

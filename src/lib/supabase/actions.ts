@@ -308,3 +308,74 @@ export async function updateGalleryImage(id: string, data: { caption?: string, c
     throw error
   }
 }
+
+
+// ============================================================
+// MILESTONE ACTIONS
+// ============================================================
+
+export async function getMilestones() {
+  return await prisma.milestone.findMany({
+    orderBy: {
+      order: 'asc'
+    }
+  })
+}
+
+export async function createMilestone(data: any) {
+  await ensureAuthenticated()
+  const { title, description, dateString, image, imagePosition, order } = data
+  const milestone = await prisma.milestone.create({
+    data: {
+      title,
+      description,
+      dateString,
+      image,
+      imagePosition: imagePosition || "50% 20%",
+      order: Number(order) || 0
+    }
+  })
+  revalidatePath("/")
+  revalidatePath("/admin/milestones")
+  return milestone
+}
+
+export async function updateMilestone(id: string, data: any) {
+  await ensureAuthenticated()
+  const { title, description, dateString, image, imagePosition, order } = data
+  const milestone = await prisma.milestone.update({
+    where: { id },
+    data: {
+      title,
+      description,
+      dateString,
+      image,
+      imagePosition: imagePosition || "50% 20%",
+      order: Number(order) || 0
+    }
+  })
+  revalidatePath("/")
+  revalidatePath("/admin/milestones")
+  return milestone
+}
+
+export async function deleteMilestone(id: string) {
+  await ensureAuthenticated()
+  await prisma.milestone.delete({
+    where: { id }
+  })
+  revalidatePath("/")
+  revalidatePath("/admin/milestones")
+}
+
+export async function updateMilestoneOrder(items: { id: string, order: number }[]) {
+  await ensureAuthenticated()
+  return await prisma.$transaction(
+    items.map((item) =>
+      prisma.milestone.update({
+        where: { id: item.id },
+        data: { order: item.order },
+      })
+    )
+  )
+}
