@@ -16,13 +16,13 @@ const remoteTools = [
   },
   {
     icon: Tv,
-    name: "TeamViewer",
-    id: "TeamViewer ID: Contact Support",
-    desc: "Enterprise-grade remote access — ideal for multi-session support and file transfer.",
-    steps: ["Download TeamViewer from teamviewer.com", "Share your TeamViewer ID and password", "Our team connects to your session", "Full support with screen sharing"],
+    name: "UltraViewer",
+    id: "UltraViewer ID: Contact Support",
+    desc: "Fast and secure remote control — ideal for instant remote assistance and file sharing.",
+    steps: ["Download UltraViewer from ultraviewer.net", "Share your UltraViewer ID and password", "Our team connects to your session", "Full support with screen sharing"],
     color: "from-blue-800 to-indigo-900",
-    download: "https://www.teamviewer.com/en/download",
-    downloadLabel: "Download TeamViewer",
+    download: "https://www.ultraviewer.net/en/download.html",
+    downloadLabel: "Download UltraViewer",
   },
 ]
 

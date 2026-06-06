@@ -24,7 +24,7 @@ const allFeatures = [
   { icon: Lock, title: "Role-Based Access", desc: "User roles — chairman, secretary, operator, auditor." },
   { icon: Cloud, title: "Cloud Backup", desc: "Scheduled cloud backups with restore capability." },
   { icon: ShieldCheck, title: "Audit Trail", desc: "Immutable audit logs for every data change." },
-  { icon: Phone, title: "Remote Support Ready", desc: "AnyDesk & TeamViewer integration for instant support." },
+  { icon: Phone, title: "Remote Support Ready", desc: "AnyDesk & UltraViewer integration for instant support." },
   { icon: Truck, title: "Route Management", desc: "Village-wise collection route planning and tracking." },
 ]
 

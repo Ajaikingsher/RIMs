@@ -92,7 +92,7 @@ export const faqData: FAQItem[] = [
   },
   {
     question: "How is remote support provided?",
-    answer: "Our support team provides remote assistance via AnyDesk and TeamViewer. Our team can connect to your system remotely within minutes.",
+    answer: "Our support team provides remote assistance via AnyDesk and UltraViewer. Our team can connect to your system remotely within minutes.",
   },
 ]
 

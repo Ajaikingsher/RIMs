@@ -27,7 +27,7 @@ const faqs = [
   },
   {
     question: "How is remote support provided?",
-    answer: "Our support team provides remote assistance via AnyDesk and TeamViewer. When you face an issue, our team can connect to your system remotely within minutes and resolve issues without the need for a site visit.",
+    answer: "Our support team provides remote assistance via AnyDesk and UltraViewer. When you face an issue, our team can connect to your system remotely within minutes and resolve issues without the need for a site visit.",
   },
   {
     question: "Is the software suitable for multi-branch or apex cooperative use?",

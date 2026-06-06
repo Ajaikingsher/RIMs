@@ -18,7 +18,7 @@ export default function SupportHero() {
           </h1>
 
           <p className="text-gray-300 text-lg leading-relaxed max-w-2xl mx-auto">
-            Find answers, download resources, or connect with our support team via phone, WhatsApp, AnyDesk, or TeamViewer.
+            Find answers, download resources, or connect with our support team via phone, WhatsApp, AnyDesk, or UltraViewer.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
             <div className="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-5 py-2.5 text-white text-sm">

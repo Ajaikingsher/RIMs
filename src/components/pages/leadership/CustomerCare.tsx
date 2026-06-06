@@ -116,7 +116,7 @@ export default function CustomerCare({ members = [] }: { members?: any[] }) {
               </a>
             </div>
             
-            <p className="mt-8 text-xs text-gray-500 font-medium">Available Monday–Saturday, 9 AM – 6 PM IST. Remote support via AnyDesk & TeamViewer.</p>
+            <p className="mt-8 text-xs text-gray-500 font-medium">Available Monday–Saturday, 9 AM – 6 PM IST. Remote support via AnyDesk & UltraViewer.</p>
           </div>
         </motion.div>
       </div>

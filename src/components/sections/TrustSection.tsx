@@ -31,7 +31,7 @@ const trustCards = [
   {
     icon: HeadphonesIcon,
     title: "Enterprise Support",
-    description: "Dedicated customer support team with remote access capabilities via AnyDesk and TeamViewer for instant resolution.",
+    description: "Dedicated customer support team with remote access capabilities via AnyDesk and UltraViewer for instant resolution.",
     color: "from-purple-500/10 to-purple-500/5",
     border: "border-purple-500/20",
     iconColor: "text-purple-500",
