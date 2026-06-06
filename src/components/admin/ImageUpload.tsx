@@ -55,6 +55,16 @@ export default function ImageUpload({
 
   if (!isMounted) return null
 
+  const cloudName = process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME
+  if (!cloudName) {
+    return (
+      <div className="p-4 rounded-2xl bg-amber-50 border border-amber-200 text-amber-800 text-sm flex flex-col gap-2">
+        <span className="font-semibold text-amber-900">Cloudinary Upload Disabled</span>
+        <span>Please configure the <code className="font-mono bg-amber-100/80 px-1.5 py-0.5 rounded border border-amber-200">NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME</code> environment variable on your hosting provider (Vercel) to enable image uploads.</span>
+      </div>
+    )
+  }
+
   return (
     <div className="space-y-4 w-full">
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
